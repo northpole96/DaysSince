@@ -8,17 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		1F26FE1C2AA99534003EC27E /* DaysSinceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE1B2AA99534003EC27E /* DaysSinceApp.swift */; };
-		1F26FE1E2AA99534003EC27E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE1D2AA99534003EC27E /* ContentView.swift */; };
 		1F26FE202AA99536003EC27E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F26FE1F2AA99536003EC27E /* Assets.xcassets */; };
 		1F26FE232AA99536003EC27E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F26FE222AA99536003EC27E /* Preview Assets.xcassets */; };
+		1F26FE322AA995CD003EC27E /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE292AA995CB003EC27E /* TimeView.swift */; };
+		1F26FE332AA995CD003EC27E /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE2A2AA995CC003EC27E /* ColorView.swift */; };
+		1F26FE342AA995CD003EC27E /* TodoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE2B2AA995CC003EC27E /* TodoListItem.swift */; };
+		1F26FE352AA995CD003EC27E /* CheckboxToggleStyle2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE2C2AA995CC003EC27E /* CheckboxToggleStyle2.swift */; };
+		1F26FE362AA995CD003EC27E /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE2D2AA995CC003EC27E /* CheckboxToggleStyle.swift */; };
+		1F26FE372AA995CD003EC27E /* EditTodoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE2E2AA995CD003EC27E /* EditTodoSheet.swift */; };
+		1F26FE382AA995CD003EC27E /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE2F2AA995CD003EC27E /* Todo.swift */; };
+		1F26FE392AA995CD003EC27E /* KeyboardTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE302AA995CD003EC27E /* KeyboardTopView.swift */; };
+		1F26FE3A2AA995CD003EC27E /* AddTodoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE312AA995CD003EC27E /* AddTodoSheet.swift */; };
+		1F26FE3C2AA99808003EC27E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26FE3B2AA99808003EC27E /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F26FE182AA99534003EC27E /* DaysSince.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaysSince.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F26FE1B2AA99534003EC27E /* DaysSinceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysSinceApp.swift; sourceTree = "<group>"; };
-		1F26FE1D2AA99534003EC27E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1F26FE1F2AA99536003EC27E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F26FE222AA99536003EC27E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1F26FE292AA995CB003EC27E /* TimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		1F26FE2A2AA995CC003EC27E /* ColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		1F26FE2B2AA995CC003EC27E /* TodoListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListItem.swift; sourceTree = "<group>"; };
+		1F26FE2C2AA995CC003EC27E /* CheckboxToggleStyle2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle2.swift; sourceTree = "<group>"; };
+		1F26FE2D2AA995CC003EC27E /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		1F26FE2E2AA995CD003EC27E /* EditTodoSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTodoSheet.swift; sourceTree = "<group>"; };
+		1F26FE2F2AA995CD003EC27E /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		1F26FE302AA995CD003EC27E /* KeyboardTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardTopView.swift; sourceTree = "<group>"; };
+		1F26FE312AA995CD003EC27E /* AddTodoSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoSheet.swift; sourceTree = "<group>"; };
+		1F26FE3B2AA99808003EC27E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +69,17 @@
 		1F26FE1A2AA99534003EC27E /* DaysSince */ = {
 			isa = PBXGroup;
 			children = (
+				1F26FE312AA995CD003EC27E /* AddTodoSheet.swift */,
+				1F26FE2D2AA995CC003EC27E /* CheckboxToggleStyle.swift */,
+				1F26FE2C2AA995CC003EC27E /* CheckboxToggleStyle2.swift */,
+				1F26FE2A2AA995CC003EC27E /* ColorView.swift */,
+				1F26FE2E2AA995CD003EC27E /* EditTodoSheet.swift */,
+				1F26FE302AA995CD003EC27E /* KeyboardTopView.swift */,
+				1F26FE292AA995CB003EC27E /* TimeView.swift */,
+				1F26FE2F2AA995CD003EC27E /* Todo.swift */,
+				1F26FE2B2AA995CC003EC27E /* TodoListItem.swift */,
+				1F26FE3B2AA99808003EC27E /* ContentView.swift */,
 				1F26FE1B2AA99534003EC27E /* DaysSinceApp.swift */,
-				1F26FE1D2AA99534003EC27E /* ContentView.swift */,
 				1F26FE1F2AA99536003EC27E /* Assets.xcassets */,
 				1F26FE212AA99536003EC27E /* Preview Content */,
 			);
@@ -137,8 +164,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F26FE1E2AA99534003EC27E /* ContentView.swift in Sources */,
+				1F26FE342AA995CD003EC27E /* TodoListItem.swift in Sources */,
+				1F26FE392AA995CD003EC27E /* KeyboardTopView.swift in Sources */,
+				1F26FE3A2AA995CD003EC27E /* AddTodoSheet.swift in Sources */,
+				1F26FE332AA995CD003EC27E /* ColorView.swift in Sources */,
+				1F26FE372AA995CD003EC27E /* EditTodoSheet.swift in Sources */,
+				1F26FE3C2AA99808003EC27E /* ContentView.swift in Sources */,
+				1F26FE382AA995CD003EC27E /* Todo.swift in Sources */,
 				1F26FE1C2AA99534003EC27E /* DaysSinceApp.swift in Sources */,
+				1F26FE322AA995CD003EC27E /* TimeView.swift in Sources */,
+				1F26FE352AA995CD003EC27E /* CheckboxToggleStyle2.swift in Sources */,
+				1F26FE362AA995CD003EC27E /* CheckboxToggleStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
