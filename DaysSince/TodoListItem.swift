@@ -36,7 +36,7 @@ struct TodoListItem: View {
         VStack(){
             Spacer()
             HStack{
-                VStack{
+                VStack(alignment: .leading){
                     Text("\(todo.title)")
                     Text(suitableFormat(todo: todo)).font(.caption)
                     
