@@ -21,18 +21,40 @@ struct TodoListItem: View {
     
     
     var body: some View {
-        VStack(alignment:.leading){
-//
-            
-            Text(todo.title)
+//        VStack(alignment:.leading){
+////
+//            
+//            Text(todo.title)
+//            Spacer()
+//            Text(suitableFormat(todo: todo)).font(.caption)
+////            Text(format(d:currentDate))
+////            Text(format(d:todo.startingTime))
+//            
+//                
+//            Spacer()
+//        }
+        VStack(){
             Spacer()
-            Text(suitableFormat(todo: todo)).font(.caption)
-//            Text(format(d:currentDate))
-//            Text(format(d:todo.startingTime))
-            
+            HStack{
+                VStack{
+                    Text("\(todo.title)")
+                    Text(suitableFormat(todo: todo)).font(.caption)
+                    
+                }
                 
-            Spacer()
+                Spacer()
+                
+            }
+            .padding()
+            
+            
         }
+        
+        .frame(maxWidth: .infinity)
+        .frame(height: 100)
+        
+        .background(todo.startColor)
+        .cornerRadius(12)
         .onAppear(){
             startTimer()
         }

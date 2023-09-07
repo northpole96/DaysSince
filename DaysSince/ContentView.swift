@@ -15,27 +15,31 @@ struct ContentView: View {
     @EnvironmentObject private var todoList: TodoList
     @State private var isSheetPresented = false
     @State private var newTodoTitle = ""
+    let col=[
+    GridItem(.flexible()),
+    GridItem(.flexible())
+    
+    
+    ]
     
     var body: some View {
         NavigationView {
-            VStack {
-                //                List {
-                //                    ForEach(todoList.todos) { todo in
-                //                        TodoListItem(todo: todo)
-                //                    }
-                //                    .onDelete(perform: deleteTodo)
-                //
-                //
-                //
-                //                }
-                
-                List {
-                    Section(header: Text("Incomplete Todos")) {
-                        ForEach(todoList.todos) { todo in
-                            TodoListItem(todo: todo)
-                        }
-                        .onDelete(perform: deleteTodo)
+            ScrollView {
+             
+                LazyVGrid(columns: col,spacing: 10) {
+                    
+                    ForEach(todoList.todos) { todo in
+                        //                            TodoListItem(todo: todo)
+                        //                                .frame(maxWidth: .infinity)
+                        //                                .frame(height: 100)
+                        //                                .background(todo.startColor)
+                        //                                .cornerRadius(12)
+                    TodoListItem(todo: todo)
+                                                        
+                                                        
                     }
+                        .onDelete(perform: deleteTodo)
+                    
                     
                     
                 }
@@ -43,7 +47,9 @@ struct ContentView: View {
                 
                 
                 
+                
             }
+            .padding(10)
             .navigationTitle("Todos")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

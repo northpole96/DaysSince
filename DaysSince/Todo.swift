@@ -18,7 +18,15 @@ struct Todo: Identifiable {
 
 class TodoList: ObservableObject {
    
-    @Published var todos: [Todo] = []
+    @Published var todos: [Todo] = [
+        Todo(title: "Spider", startingTime: Date.distantPast, startColor: Color.red),
+        Todo(title: "Spider", startingTime: Date.distantPast, startColor: Color.blue),
+        Todo(title: "Spider", startingTime: Date.distantPast, startColor: Color.teal),
+        Todo(title: "Spider", startingTime: Date.distantPast, startColor: Color.green),
+        Todo(title: "Spider", startingTime: Date.distantPast, startColor: Color.yellow)
+        
+        
+    ]
     
    
    
