@@ -12,6 +12,7 @@ struct EditTodoSheet: View {
     @Binding var isPresented: Bool
     @ObservedObject var todoList: TodoList
     var todo: Todo
+    @State var isConfirmationDialogueShowing=false
     
 
     @State private var editedTitle: String
@@ -43,9 +44,18 @@ struct EditTodoSheet: View {
                             Spacer()
                         }
                         .onTapGesture {
+//                            todoList.deleteTodo(at: todoIndex(todo: todo))
+                            isConfirmationDialogueShowing=true
+                        }
+                    }
+                    .confirmationDialog("Are you sure", isPresented: $isConfirmationDialogueShowing){
+                        
+                        Button("Delete", role:.destructive){
+                            
                             todoList.deleteTodo(at: todoIndex(todo: todo))
                         }
                     }
+                    .buttonStyle(BorderlessButtonStyle())
                     
                 }
                 .listRowBackground(Color.red)
