@@ -49,7 +49,6 @@ struct EditTodoSheet: View {
                         }
                     }
                     .confirmationDialog("Are you sure", isPresented: $isConfirmationDialogueShowing){
-                        
                         Button("Delete", role:.destructive){
                             
                             todoList.deleteTodo(at: todoIndex(todo: todo))
