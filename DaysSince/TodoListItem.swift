@@ -71,7 +71,8 @@ struct TodoListItem: View {
         }
         
         .sheet(isPresented: $isEditSheetPresented) {
-//            EditTodoSheet(isPresented: $isEditSheetPresented, todoList: todoList, todo: todo,isComplete: $isCompleted)
+            EditTodoSheet(isPresented: $isEditSheetPresented, todoList: todoList, todo: todo)
+        
             
         }
     }

@@ -12,17 +12,17 @@ struct EditTodoSheet: View {
     @Binding var isPresented: Bool
     @ObservedObject var todoList: TodoList
     var todo: Todo
-    @Binding var isComplete: Bool // Add this line
+    
 
     @State private var editedTitle: String
-//    @State private var isComplete:Bool
+//
     
-    init(isPresented: Binding<Bool>, todoList: TodoList, todo: Todo,isComplete: Binding<Bool>) {
+    init(isPresented: Binding<Bool>, todoList: TodoList, todo: Todo) {
         self._isPresented = isPresented
         self.todoList = todoList
         self.todo = todo
         _editedTitle = State(initialValue: todo.title)
-        self._isComplete = isComplete // Initialize isCompleted
+        
 
     }
     
@@ -33,8 +33,22 @@ struct EditTodoSheet: View {
                     TextField("Enter todo name", text: $editedTitle)
                         .focused($isFocused)
                 }
-                Toggle( isOn: $isComplete){Text("Status")}
                 
+                Section{
+                    Button(action: {}){
+                        HStack{
+                            Spacer()
+                            Text("Delete").foregroundColor(.white)
+                                .font(.headline)
+                            Spacer()
+                        }
+                        .onTapGesture {
+                            todoList.deleteTodo(at: todoIndex(todo: todo))
+                        }
+                    }
+                    
+                }
+                .listRowBackground(Color.red)
             }
             .navigationBarTitle("Edit Todo", displayMode: .inline)
             .navigationBarItems(
@@ -42,7 +56,7 @@ struct EditTodoSheet: View {
                     isPresented = false
                 },
                 trailing: Button("Save") {
-                    todoList.editTodo(at: todoIndex(todo: todo), newTitle: editedTitle,isCompleted: isComplete)
+//                    todoList.editTodo(at: todoIndex(todo: todo), newTitle: editedTitle,isCompleted: isComplete)
                     isPresented = false
                     print(todoList.todos)
                 }.disabled(editedTitle.isEmpty)
