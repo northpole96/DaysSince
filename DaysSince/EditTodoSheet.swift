@@ -39,12 +39,45 @@ struct EditTodoSheet: View {
                     Button(action: {}){
                         HStack{
                             Spacer()
+                            Text("Reset").foregroundColor(.white)
+                                .font(.headline)
+                            Spacer()
+                        }
+                        .onTapGesture {
+                            
+                            todoList.addReset(at: todoIndex(todo: todo), date: Date.now)
+                        }
+                    }
+                    .buttonStyle(BorderlessButtonStyle())
+                    
+                }
+                .listRowBackground(todo.startColor)
+//                Section("All resets"){
+//                    
+//                    ForEach(todo.rests, id:\.self){ i in
+//                       Text(format(d: i))
+//                    }
+//                    
+//                    
+//                }
+                Section(){
+                    
+                    NavigationLink("All Resets", destination:ResetView(todo: todo))
+                                    
+                    
+                }
+                
+                
+                Section{
+                    Button(action: {}){
+                        HStack{
+                            Spacer()
                             Text("Delete").foregroundColor(.white)
                                 .font(.headline)
                             Spacer()
                         }
                         .onTapGesture {
-//                            todoList.deleteTodo(at: todoIndex(todo: todo))
+                            //                            todoList.deleteTodo(at: todoIndex(todo: todo))
                             isConfirmationDialogueShowing=true
                         }
                     }
@@ -66,6 +99,7 @@ struct EditTodoSheet: View {
                 },
                 trailing: Button("Save") {
 //                    todoList.editTodo(at: todoIndex(todo: todo), newTitle: editedTitle,isCompleted: isComplete)
+                    todoList.editTodo(at: todoIndex(todo: todo), newTitle:editedTitle)
                     isPresented = false
                     print(todoList.todos)
                 }.disabled(editedTitle.isEmpty)
@@ -82,8 +116,38 @@ struct EditTodoSheet: View {
         }
         return index
     }
+    private func format(d:Date)->String{
+        let dateLLCCK=DateFormatter()
+        dateLLCCK.dateFormat="yyyy-MM-dd HH:mm:ss"
+        return dateLLCCK.string(from: d)
+        
+        
+    }
 }
 
+
+struct ResetView:View {
+    var todo:Todo
+    var body: some View{
+        
+        Form{
+            ForEach(todo.resets,id:\.self){i in
+                Text(format(d:i))
+            }
+            
+            
+        }
+        .navigationTitle(todo.title)
+    }
+    
+    private func format(d:Date)->String{
+        let dateLLCCK=DateFormatter()
+        dateLLCCK.dateFormat="yyyy-MM-dd HH:mm:ss"
+        return dateLLCCK.string(from: d)
+        
+        
+    }
+}
 
 //#Preview {
 //    EditTodoSheet()

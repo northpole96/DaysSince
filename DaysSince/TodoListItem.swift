@@ -21,18 +21,7 @@ struct TodoListItem: View {
     
     
     var body: some View {
-//        VStack(alignment:.leading){
-////
-//            
-//            Text(todo.title)
-//            Spacer()
-//            Text(suitableFormat(todo: todo)).font(.caption)
-////            Text(format(d:currentDate))
-////            Text(format(d:todo.startingTime))
-//            
-//                
-//            Spacer()
-//        }
+
         VStack(){
             Spacer()
             HStack{
@@ -95,12 +84,20 @@ struct TodoListItem: View {
     
     private func suitableFormat(todo:Todo)->String{
         var timeDifference=DateComponents(year: 0, month: 0, day: 0,hour: 0,minute: 0,second: 0)
-       
+        
         
         
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: todo.startingTime, to: currentDate)
-        timeDifference = components
+        if(todo.resets.count==0){
+            let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: todo.startingTime, to: currentDate)
+            timeDifference = components
+        }
+        else{
+            
+            let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: todo.resets[todo.resets.count-1], to: currentDate)
+            timeDifference = components
+        }
+       
         
         if let year=timeDifference.year{
             if(year>0)

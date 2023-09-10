@@ -13,6 +13,7 @@ struct Todo: Identifiable {
     var title: String
     var startingTime:Date
     var startColor:Color
+    var resets:[Date]=[]
     
 }
 
@@ -42,6 +43,10 @@ class TodoList: ObservableObject {
         let newTodo = Todo(title: title,startingTime: date,startColor: startColor)
         todos.append(newTodo)
     }
+    func addReset(at index:Int ,date:Date)  {
+        guard index >= 0 && index < todos.count else { return }
+        todos[index].resets.append(date)
+    }
     
     func deleteTodo(at index: Int) {
         guard index >= 0 && index < todos.count else { return }
@@ -50,7 +55,7 @@ class TodoList: ObservableObject {
         
     }
     
-    func editTodo(at index: Int, newTitle: String,isCompleted: Bool) {
+    func editTodo(at index: Int, newTitle: String) {
         guard index >= 0 && index < todos.count else { return }
         todos[index].title = newTitle
         
